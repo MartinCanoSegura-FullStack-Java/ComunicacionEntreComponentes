@@ -1,0 +1,33 @@
+<h1> {{ titulo }} </h1>
+
+<!-- 
+    () = Eventos 
+-->
+
+<h3>One Way Binding</h3>
+<input type="number" (keyup)="recibirTecla1($event)">
+<input type="number" (keyup)="recibirTecla2($event)">
+
+<button (click)="calcular('s')">+</button>
+<button (click)="calcular('r')">-</button>
+<button (click)="calcular('m')">*</button>
+<button (click)="calcular('d')">/</button>
+<button (click)="calcular('w')">mod</button>
+
+<h4>Resultado: {{ total }} </h4>
+
+<h2>-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</h2>
+
+<h3> Two Way Binding </h3>
+<h5> TwoWayBinding se activa importando FormsModule en app.modules </h5>
+
+<input type="number" [(ngModel)]="num1">
+<input type="number" [(ngModel)]="num2">
+
+<button (click)="calcular('s')">+</button>
+<button (click)="calcular('r')">-</button>
+<button (click)="calcular('m')">*</button>
+<button (click)="calcular('d')">/</button>
+<button (click)="calcular('w')">mod</button>
+
+<h4>Resultado: {{ total }} </h4>

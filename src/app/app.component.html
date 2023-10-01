@@ -1,0 +1,10 @@
+
+
+<app-calculadora></app-calculadora>
+
+<h2>***********************************************************************************************</h2>
+<h1> {{ title }} </h1>
+
+<app-calculadora-cec (emisor)="recibirEmision($event)" [textFromFather]="textFather"></app-calculadora-cec>
+
+<h4>Resultado enviado desde el HIJO, mostrado por el PADRE: {{ totalRecibido }} </h4>
